@@ -46,9 +46,9 @@ void loop(){
       Serial.print("Raw Value : ");
       Serial.print((float)sensor.depth());
       Serial.print(" meter\t");
-      Serial.print("Input : ");
-      Serial.print(sensorValue);
-      Serial.print("\t");
+      // Serial.print("Input : ");
+      // Serial.print(sensorValue);
+      // Serial.print("\t");
       Serial.print("Output : ");
       Serial.print("116");
       Serial.print("\n");
@@ -60,9 +60,9 @@ void loop(){
       Serial.print("Raw Value : ");
       Serial.print((float)sensor.depth());
       Serial.print(" meter\t");
-      Serial.print("Input : ");
-      Serial.print(sensorValue);
-      Serial.print("\t");
+      // Serial.print("Input : ");
+      // Serial.print(sensorValue);
+      // Serial.print("\t");
       Serial.print("Output : ");
       Serial.print("220");
       Serial.print("\n");
