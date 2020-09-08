@@ -21,14 +21,15 @@ int waterHeight = 2;
 const int sensorPin = A0;
 
 void setup(){
-  Serial.begin(9600);
-  Wire.begin();
   servoCW.attach(servoPinCW);
   servoCW.writeMicroseconds(1500);
-
+  delay(7000);
   servoCCW.attach(servoPinCCW);
   servoCCW.writeMicroseconds(1500);
   delay(7000);
+  
+  Serial.begin(5700);
+  Wire.begin();
   Serial.print("Starting Machine");
   while(! sensor.init()){
     Serial.print("Starting Failed!\nCheck connection");
