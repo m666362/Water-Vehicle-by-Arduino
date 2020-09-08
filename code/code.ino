@@ -1,3 +1,8 @@
+#include<Wire.h>
+#include "MS5837.h"
+
+MS5837 sensor;
+
 bool verticalMode = true;
 // int requiredDepth = 127;
 // int currentDepth = 0;
@@ -11,6 +16,14 @@ const int sensorPin = A0;
 
 void setup(){
   Serial.begin(9600);
+  Wire.begin();
+  Serial.print("Starting Machine");
+  while(! sensor.init()){
+    Serial.print("Starting Failed!\nCheck connection");
+    delay(5000);
+  }
+  sensor.setModel(MS5837::MS5837_30BA);
+  sensor.setFluidDensity(997); // kg/m^3 (freshwater, 1029 for seawater)
 }
 void loop(){
   /*
