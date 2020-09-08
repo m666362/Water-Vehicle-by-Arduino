@@ -9,13 +9,16 @@ Servo servoCCW;
 bool verticalMode = true;
 byte servoPinCW = 6;
 byte servoPinCCW = 9;
+int signalCW = 0;
+int signalCCW = 0;
 
 // int requiredDepth = 127;
 // int currentDepth = 0;
-int sensorValue = 0;
+/*
+ * int sensorValue = 0;
 int outputValue = 0;
 int waterHeight = 2;
-
+*/
 // const int verticalThrusterCW = 6;
 // const int verticalThrusterCCW = 9;
 const int sensorPin = A0;
@@ -56,9 +59,10 @@ void loop(){
       // motor will rotate so that it will float at 0.5m.
       // analogWrite(verticalThrusterCW, 116);
       // analogWrite(verticalThrusterCCW, 84);
-      
-      servoCW.writeMicroseconds(1718);
-      servoCCW.writeMicroseconds(1246);
+      signalCW = 1718;
+      signalCCW = 1246;
+      servoCW.writeMicroseconds(signalCW);
+      servoCCW.writeMicroseconds(signalCCW);
       Serial.print("Raw Value : ");
       Serial.print((float)sensor.depth());
       Serial.print(" meter\t");
@@ -71,9 +75,10 @@ void loop(){
     }else{
       // motor will rotate to go up
       // I have given 220 instead of 255 because i want to move robot slowly
-      
-      servoCW.writeMicroseconds(1850);
-      servoCCW.writeMicroseconds(1150);
+      signalCW = 1850;
+      signalCCW = 1150;
+      servoCW.writeMicroseconds(signalCW);
+      servoCCW.writeMicroseconds(signalCCW);
       // analogWrite(verticalThrusterCW, 220);
       // analogWrite(verticalThrusterCCW, 220);
       Serial.print("Raw Value : ");
