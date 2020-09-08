@@ -31,7 +31,7 @@ void setup(){
   servoCCW.writeMicroseconds(1500);
   delay(7000);
   
-  Serial.begin(5700);
+  Serial.begin(9600);
   Wire.begin();
   Serial.print("Starting Machine");
   while(! sensor.init()){
