@@ -35,15 +35,16 @@ void loop(){
   */
   if(verticalMode == true){
     // Write code for up-down movement
-    sensorValue = analogRead(sensorPin);
-    outputValue = map(sensorValue, 0, 1023, 0, 255);
-    if(outputValue<=64){
+    // sensorValue = analogRead(sensorPin);
+    // outputValue = map(sensorValue, 0, 1023, 0, 255);
+    sensor.read();
+    if(sensor.depth()<=0.5){
       // 256/2*0.5 = 64 for 0.5 meter
       // motor will rotate so that it will float at 0.5m.
       analogWrite(verticalThrusterCW, 116);
       analogWrite(verticalThrusterCCW, 116);
       Serial.print("Raw Value : ");
-      Serial.print((float)sensorValue/1023*2);
+      Serial.print((float)sensor.depth());
       Serial.print(" meter\t");
       Serial.print("Input : ");
       Serial.print(sensorValue);
@@ -57,7 +58,7 @@ void loop(){
       analogWrite(verticalThrusterCW, 220);
       analogWrite(verticalThrusterCCW, 220);
       Serial.print("Raw Value : ");
-      Serial.print((float)sensorValue/1023*2);
+      Serial.print((float)sensor.depth());
       Serial.print(" meter\t");
       Serial.print("Input : ");
       Serial.print(sensorValue);
@@ -66,6 +67,7 @@ void loop(){
       Serial.print("220");
       Serial.print("\n");
     }
+    delay(1000);
   }else{
     // Vertical mode false
     // Write code for forward-backward movement
