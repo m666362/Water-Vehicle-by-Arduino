@@ -65,7 +65,7 @@ void loop(){
       // Serial.print(sensorValue);
       // Serial.print("\t");
       Serial.print("Output : ");
-      Serial.print("CW-116 And CCW-84");
+      Serial.print("CW-1718 And CCW-1246");
       Serial.print("\n");
     }else{
       // motor will rotate to go up
@@ -82,7 +82,7 @@ void loop(){
       // Serial.print(sensorValue);
       // Serial.print("\t");
       Serial.print("Output : ");
-      Serial.print("220");
+      Serial.print("CW-1850 And CCW-1150");
       Serial.print("\n");
     }
     delay(1000);
