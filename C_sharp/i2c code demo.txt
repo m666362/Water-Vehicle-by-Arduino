@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+using LattePanda.Firmata;
+namespace analogWriteExample
+{
+class Program
+{
+static Arduino arduino = new Arduino();//create an instance and initialize with the default parameters
+static void Main(string[] args)
+{
+arduino.wireBegin(200);
+arduino.wireRequest(0x28, 0x76, new Int16[] { 8 }, Arduino.I2C_MODE_WRITE);//Write data{8} to I2C
+arduino.didI2CDataReveive += Arduino_didI2CDataReveive;//did I2C Data Reveive
+arduino.wireRequest(0x28, 0x76, new Int16[] { 6 }, Arduino.I2C_MODE_READ_CONTINUOUSLY);//Read data form I2C data
+}
+private static void Arduino_didI2CDataReveive(byte address, byte register, byte[] data)
+{
+Console.WriteLine(BitConverter.ToInt16(data, 0));
+Console.WriteLine(BitConverter.ToInt16(data, 2));
+Console.WriteLine(BitConverter.ToInt16(data, 4));
+}
+}
+}
