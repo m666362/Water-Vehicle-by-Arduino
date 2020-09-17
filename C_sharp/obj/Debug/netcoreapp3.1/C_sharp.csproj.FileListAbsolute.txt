@@ -1,0 +1,13 @@
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.exe
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.deps.json
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.runtimeconfig.json
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.runtimeconfig.dev.json
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.dll
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\bin\Debug\netcoreapp3.1\C_sharp.pdb
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.AssemblyInfo.cs
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.dll
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.pdb
+C:\Users\DELL\Documents\Arduino Project\Rubel\C_sharp\obj\Debug\netcoreapp3.1\C_sharp.genruntimeconfig.cache
